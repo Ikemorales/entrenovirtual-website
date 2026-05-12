@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — Entreno Virtual</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: #0F0F0F;
+      background: #fff;
+      line-height: 1.7;
+    }
+    nav {
+      padding: 16px 24px;
+      border-bottom: 1px solid #E5E5E5;
+    }
+    nav a { text-decoration: none; color: #1A6FE8; font-weight: 700; }
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    h1 { font-size: 2rem; font-weight: 900; margin-bottom: 8px; }
+    .date { color: #777; font-size: .9rem; margin-bottom: 40px; }
+    h2 { font-size: 1.1rem; font-weight: 800; margin: 32px 0 12px; }
+    p { color: #444; margin-bottom: 12px; font-size: .95rem; }
+    ul { color: #444; margin: 8px 0 12px 20px; font-size: .95rem; }
+    li { margin-bottom: 6px; }
+    a { color: #1A6FE8; }
+    footer { text-align: center; padding: 32px; color: #aaa; font-size: .85rem; border-top: 1px solid #E5E5E5; }
+  </style>
+</head>
+<body>
+
+<nav><a href="index.html">← Entreno Virtual</a></nav>
+
+<div class="content">
+  <h1>Política de Privacidad</h1>
+  <p class="date">Última actualización: 12 de mayo de 2025</p>
+
+  <p>Esta Política de Privacidad describe cómo Entreno Virtual ("nosotros", "la app") recopila, usa y protege tu información cuando usas nuestra aplicación iOS.</p>
+
+  <h2>1. Información que recopilamos</h2>
+  <p>La app accede a la siguiente información para funcionar:</p>
+  <ul>
+    <li><strong>Datos de Garmin Connect:</strong> historial de actividades, frecuencia cardíaca, HRV, datos de sueño, VO2max y métricas de rendimiento. Accedemos mediante tus credenciales de Garmin Connect.</li>
+    <li><strong>Perfil del atleta:</strong> nombre, edad, peso y altura que introduces manualmente en la app.</li>
+    <li><strong>Plan de entrenamiento:</strong> el plan generado se almacena localmente en tu dispositivo mediante UserDefaults.</li>
+    <li><strong>Preferencias de la app:</strong> configuración local guardada en tu dispositivo.</li>
+  </ul>
+
+  <h2>2. Cómo usamos tu información</h2>
+  <ul>
+    <li>Generar planes de entrenamiento personalizados mediante inteligencia artificial (Claude de Anthropic).</li>
+    <li>Responder preguntas del Coach IA sobre tu rendimiento deportivo.</li>
+    <li>Calcular análisis de recuperación, predicciones de carrera y resúmenes semanales.</li>
+    <li>Mostrar tu progreso y métricas en la app.</li>
+  </ul>
+
+  <h2>3. Compartición de datos con terceros</h2>
+  <p>Tus datos se envían a los siguientes servicios para procesar las funciones de la app:</p>
+  <ul>
+    <li><strong>Garmin Connect API:</strong> para obtener tus métricas de entrenamiento. Consulta la <a href="https://www.garmin.com/es-ES/privacy/connect/policy/" target="_blank">política de privacidad de Garmin</a>.</li>
+    <li><strong>Anthropic Claude API:</strong> tus datos de entrenamiento (agregados y sin información de identificación personal más allá de lo necesario) se envían para generar planes y respuestas del Coach. Consulta la <a href="https://www.anthropic.com/privacy" target="_blank">política de privacidad de Anthropic</a>.</li>
+  </ul>
+  <p>No vendemos, alquilamos ni compartimos tu información personal con terceros para fines publicitarios.</p>
+
+  <h2>4. Almacenamiento de datos</h2>
+  <p>Los datos del plan de entrenamiento, perfil y preferencias se almacenan <strong>localmente en tu dispositivo</strong> usando UserDefaults de iOS. No mantenemos una base de datos centralizada con tus datos personales.</p>
+  <p>Las credenciales de Garmin Connect se usan para autenticación y no se almacenan en servidores de Entreno Virtual.</p>
+
+  <h2>5. Seguridad</h2>
+  <p>Las comunicaciones entre la app y nuestro servidor backend se realizan mediante HTTPS. Sin embargo, ningún sistema de transmisión de datos es 100% seguro. Te recomendamos usar una contraseña segura en tu cuenta de Garmin.</p>
+
+  <h2>6. Menores de edad</h2>
+  <p>Entreno Virtual no está dirigida a menores de 13 años. No recopilamos intencionadamente información de menores.</p>
+
+  <h2>7. Tus derechos</h2>
+  <p>Puedes en cualquier momento:</p>
+  <ul>
+    <li>Eliminar tus datos locales desinstalando la app.</li>
+    <li>Revocar el acceso a tu cuenta Garmin desde la configuración de Garmin Connect.</li>
+    <li>Contactarnos para cualquier consulta sobre tus datos.</li>
+  </ul>
+
+  <h2>8. Cambios en esta política</h2>
+  <p>Podemos actualizar esta política ocasionalmente. Te notificaremos mediante la app o actualizando la fecha en esta página. El uso continuado de la app tras los cambios implica tu aceptación.</p>
+
+  <h2>9. Contacto</h2>
+  <p>Si tienes preguntas sobre esta política de privacidad, contáctanos en:<br>
+  <a href="mailto:jorge@coenesa.com">jorge@coenesa.com</a></p>
+</div>
+
+<footer>© 2025 Entreno Virtual. Todos los derechos reservados.</footer>
+
+</body>
+</html>
