@@ -328,6 +328,32 @@
     .step h3 { font-size: 1rem; font-weight: 800; margin-bottom: 8px; }
     .step p { font-size: .9rem; color: var(--text2); }
 
+    /* ── NUTRITION ── */
+    .nutrition-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .nutrition-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .nc-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .nutrition-card h3 { font-size: .95rem; font-weight: 800; margin-bottom: 8px; }
+    .nutrition-card p { font-size: .875rem; color: var(--text2); line-height: 1.5; }
+    .nutrition-note {
+      margin-top: 28px;
+      text-align: center;
+      font-size: .875rem;
+      color: var(--text2);
+      background: var(--orange-bg);
+      padding: 14px 20px;
+      border-radius: var(--radius);
+    }
+
     /* ── WHY NOT CHATGPT ── */
     .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .comp-card { border-radius: var(--radius); padding: 28px; }
@@ -464,6 +490,10 @@
       .hero-actions { justify-content: center; }
       .phone-wrap { order: -1; }
       .comparison { grid-template-columns: 1fr; }
+      .nutrition-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .nutrition-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -693,6 +723,48 @@
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- NUTRITION -->
+<section id="nutricion">
+  <div class="container">
+    <span class="section-label">Nutrición</span>
+    <h2>Plan de alimentación incluido — 7 componentes</h2>
+    <p class="subtitle">No es una guía genérica de "come pasta antes de correr". Claude analiza tu peso, edad, volumen de entrenamiento y evento objetivo, y genera un plan personalizado para cada tipo de día.</p>
+    <div class="nutrition-grid">
+      <div class="nutrition-card">
+        <div class="nc-icon">🔥</div>
+        <h3>Calorías por tipo de día</h3>
+        <p>Tabla de kcal y macros (en gramos y % del total) para día de descanso, entreno fácil, entreno de calidad y salida larga.</p>
+      </div>
+      <div class="nutrition-card">
+        <div class="nc-icon">🍽️</div>
+        <h3>Menús de ejemplo</h3>
+        <p>5–6 comidas detalladas con ingredientes y cantidades para tres tipos de día: entrenamiento, descanso y salida larga.</p>
+      </div>
+      <div class="nutrition-card">
+        <div class="nc-icon">💧</div>
+        <h3>Guía de hidratación</h3>
+        <p>Cuánto tomar antes, durante y después según el tipo de sesión, con recomendaciones de electrolitos y sodio.</p>
+      </div>
+      <div class="nutrition-card">
+        <div class="nc-icon">🌿</div>
+        <h3>Guía de alimentos</h3>
+        <p>Carbohidratos, proteínas y grasas recomendados vs a limitar, más alimentos antiinflamatorios para atletas mayores de 50.</p>
+      </div>
+      <div class="nutrition-card">
+        <div class="nc-icon">⏱️</div>
+        <h3>Timing pre / durante / post</h3>
+        <p>Tabla de estrategia: qué y cuánto comer 3–4h antes, 30 min antes, y cómo recargar durante la salida larga.</p>
+      </div>
+      <div class="nutrition-card">
+        <div class="nc-icon">💊</div>
+        <h3>Suplementación personalizada</h3>
+        <p>Lista con dosis y propósito específico: vitamina D3, omega-3, magnesio y más, adaptada al perfil del atleta.</p>
+      </div>
+    </div>
+    <p class="nutrition-note">El plan de nutrición se genera junto con el plan de entrenamiento y está disponible dentro de la app en la pestaña <strong>Mi Plan</strong>.</p>
   </div>
 </section>
 
