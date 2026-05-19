@@ -121,6 +121,10 @@
     }
     .btn-primary:hover { background: #333; transform: translateY(-1px); }
     .btn-primary svg { width: 20px; height: 20px; }
+    .btn-android {
+      background: #1DB954 !important;
+    }
+    .btn-android:hover { background: #17a349 !important; }
     .hero-note { font-size: .8rem; color: var(--text2); }
 
     /* Phone mockup */
@@ -236,6 +240,46 @@
     }
     .subtitle { color: var(--text2); font-size: 1.05rem; max-width: 520px; margin-bottom: 48px; }
 
+    /* ── PHASES ── */
+    .phases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .phase-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 20px;
+    }
+    .phase-num {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1rem; color: #fff;
+      flex-shrink: 0;
+    }
+    .phase-header h3 { font-size: 1rem; font-weight: 800; margin-bottom: 2px; }
+    .phase-header p { font-size: .8rem; opacity: .8; }
+    .phase-body { padding: 0 20px 18px; }
+    .phase-body ul { list-style: none; }
+    .phase-body li {
+      font-size: .875rem;
+      color: var(--text2);
+      padding: 5px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .phase-body li:last-child { border-bottom: none; }
+    .phase-body li::before { content: "✓"; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+
     /* ── FEATURES ── */
     .features-grid {
       display: grid;
@@ -349,6 +393,18 @@
     .btn-price:hover { background: #333; }
     .price-card.featured .btn-price { background: var(--orange); }
     .price-card.featured .btn-price:hover { background: var(--orange-light); }
+    .store-buttons { display: flex; gap: 8px; flex-direction: column; }
+    .btn-store-small {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 10px; border-radius: 10px; text-decoration: none;
+      font-weight: 700; font-size: .85rem; color: #fff;
+      transition: background .2s;
+    }
+    .btn-store-small.apple { background: var(--text); }
+    .btn-store-small.apple:hover { background: #333; }
+    .btn-store-small.google { background: #1DB954; }
+    .btn-store-small.google:hover { background: #17a349; }
+    .btn-store-small svg { width: 16px; height: 16px; }
 
     /* ── FAQ ── */
     .faq-list { max-width: 720px; }
@@ -434,11 +490,15 @@
     <h1>Entrena con <span>inteligencia artificial</span> y datos reales</h1>
     <p>Planes de entrenamiento personalizados para corredores y triatletas, construidos sobre tu historial real de Garmin — no sobre datos genéricos.</p>
     <div class="hero-actions">
-      <a href="#" class="btn-primary">
+      <a href="#pricing" class="btn-primary">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         App Store
       </a>
-      <span class="hero-note">Gratis · Premium desde $9.99/mes</span>
+      <a href="#pricing" class="btn-primary btn-android">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341c-.341 0-.618-.277-.618-.618V8.277c0-.341.277-.618.618-.618s.618.277.618.618v6.446c0 .341-.277.618-.618.618zm-11.046 0c-.341 0-.618-.277-.618-.618V8.277c0-.341.277-.618.618-.618s.618.277.618.618v6.446c0 .341-.277.618-.618.618zM8.5 18.5v1.5c0 .276.224.5.5.5s.5-.224.5-.5V18.5h5V20c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h.5c.828 0 1.5-.672 1.5-1.5V9H8v8c0 .828.672 1.5 1.5 1.5h-.5zm7.146-12.854l1-1.646c.069-.114.033-.263-.082-.332-.114-.069-.263-.033-.332.082l-1.021 1.682C14.557 5.175 13.8 5 13 5c-.8 0-1.557.175-2.211.432L9.768 3.75c-.069-.115-.218-.151-.332-.082-.115.069-.151.218-.082.332l1 1.646C9.291 6.357 8.5 7.646 8.5 9h7c0-1.354-.791-2.643-1.854-3.354z"/></svg>
+        Google Play
+      </a>
+      <span class="hero-note">Gratis · Premium desde $4.99/mes</span>
     </div>
   </div>
 
@@ -457,7 +517,7 @@
             <div class="phone-card-row">
               <span class="phone-pill">45 min</span>
               <span class="phone-pill phone-orange">8 km</span>
-              <span class="phone-pill">Z2</span>
+              <span class="phone-pill">5:40/km</span>
             </div>
           </div>
           <div class="phone-bar">
@@ -500,76 +560,106 @@
       <svg width="24" height="24" viewBox="0 0 24 24" fill="#1C1C1E"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#1C1C1E"/></svg>
       App Store
     </div>
+    <div class="logo-badge">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#1DB954"><path d="M17.523 15.341c-.341 0-.618-.277-.618-.618V8.277c0-.341.277-.618.618-.618s.618.277.618.618v6.446c0 .341-.277.618-.618.618zm-11.046 0c-.341 0-.618-.277-.618-.618V8.277c0-.341.277-.618.618-.618s.618.277.618.618v6.446c0 .341-.277.618-.618.618zM8.5 18.5v1.5c0 .276.224.5.5.5s.5-.224.5-.5V18.5h5V20c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h.5c.828 0 1.5-.672 1.5-1.5V9H8v8c0 .828.672 1.5 1.5 1.5h-.5zm7.146-12.854l1-1.646c.069-.114.033-.263-.082-.332-.114-.069-.263-.033-.332.082l-1.021 1.682C14.557 5.175 13.8 5 13 5c-.8 0-1.557.175-2.211.432L9.768 3.75c-.069-.115-.218-.151-.332-.082-.115.069-.151.218-.082.332l1 1.646C9.291 6.357 8.5 7.646 8.5 9h7c0-1.354-.791-2.643-1.854-3.354z"/></svg>
+      Google Play
+    </div>
   </div>
 </div>
 
-<!-- FEATURES -->
+<!-- HOW IT WORKS — 3 PHASES -->
 <section id="features">
   <div class="container">
-    <span class="section-label">Funcionalidades</span>
-    <h2>Todo lo que necesitas para entrenar mejor</h2>
-    <p class="subtitle">No es otro generador de planes genéricos. Entreno Virtual analiza tus datos reales y se adapta a ti.</p>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">✨</div>
-        <h3>Planes con IA ilimitados</h3>
-        <p>Genera y regenera planes personalizados para tu evento objetivo en menos de 60 segundos.</p>
+    <span class="section-label">Cómo funciona</span>
+    <h2>Tres fases para llegar a tu meta</h2>
+    <p class="subtitle">Entreno Virtual te guía desde la planificación hasta la carrera, con IA en cada paso.</p>
+    <div class="phases-grid">
+
+      <div class="phase-card">
+        <div class="phase-header" style="background:#EBF3FE; color:#1A6FE8;">
+          <div class="phase-num" style="background:#1A6FE8;">1</div>
+          <div>
+            <h3 style="color:#1A6FE8;">Planificación</h3>
+            <p style="color:#1A6FE8;">Definir metas y crear tu plan</p>
+          </div>
+        </div>
+        <div class="phase-body">
+          <ul>
+            <li>Registra tu evento objetivo y fecha</li>
+            <li>Define días de descanso y salida larga</li>
+            <li>Conecta Garmin o Strava para analizar tu historial</li>
+            <li>Claude genera tu plan semana a semana con ritmos exactos</li>
+            <li>Claude genera tu plan de nutrición por tipo de día</li>
+          </ul>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🧠</div>
-        <h3>Coach IA 24/7</h3>
-        <p>Pregúntale cualquier cosa sobre tu rendimiento. Responde con datos reales de tu historial Garmin.</p>
+
+      <div class="phase-card">
+        <div class="phase-header" style="background:#FFF3E0; color:#E65100;">
+          <div class="phase-num" style="background:#E65100;">2</div>
+          <div>
+            <h3 style="color:#E65100;">Seguimiento</h3>
+            <p style="color:#E65100;">Medir cumplimiento y progreso</p>
+          </div>
+        </div>
+        <div class="phase-body">
+          <ul>
+            <li>Cumplimiento semanal: sesiones, km y tiempo planeado vs real</li>
+            <li>Porcentaje acumulado semana a semana</li>
+            <li>Progreso atlético: velocidad, cadencia, FC y potencia</li>
+            <li>Gráficas de evolución semanal y acumulada</li>
+          </ul>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <h3>Historial Garmin completo</h3>
-        <p>52 semanas de carreras, FC, cadencia, sueño y VO2max visualizados en gráficas de progreso.</p>
+
+      <div class="phase-card">
+        <div class="phase-header" style="background:#E8F5E9; color:#2E7D32;">
+          <div class="phase-num" style="background:#2E7D32;">3</div>
+          <div>
+            <h3 style="color:#2E7D32;">Coach IA</h3>
+            <p style="color:#2E7D32;">Chat directo con Claude</p>
+          </div>
+        </div>
+        <div class="phase-body">
+          <ul>
+            <li>Consulta cualquier duda sobre tu entrenamiento</li>
+            <li>Claude tiene contexto de tu plan y tu progreso real</li>
+            <li>Pide ajustes, explicaciones o motivación</li>
+            <li>Nutrición, recuperación, equipamiento y más</li>
+          </ul>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3>Análisis de recuperación</h3>
-        <p>Score diario basado en HRV, calidad de sueño y FC reposo. Sabe cuándo dar el todo.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🏁</div>
-        <h3>Predicción de tiempo</h3>
-        <p>Estimación de tu tiempo en el evento objetivo basada en tus actividades recientes y VO2max.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📅</div>
-        <h3>Calendario vertical</h3>
-        <p>Ve todos tus entrenamientos en formato calendario, marca sesiones completadas y edita detalles.</p>
-      </div>
+
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- HOW TO START -->
 <section class="how">
   <div class="container">
-    <span class="section-label">Cómo funciona</span>
+    <span class="section-label">Por dónde empezar</span>
     <h2>En marcha en menos de 5 minutos</h2>
     <p class="subtitle">Sin exportar archivos, sin hojas de cálculo, sin configuración compleja.</p>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
-        <h3>Conecta Garmin</h3>
-        <p>Introduce tus credenciales de Garmin Connect. La app sincroniza tu historial completo automáticamente.</p>
+        <h3>Agrega tu evento</h3>
+        <p>Ve a Mi Plan y registra tu evento objetivo: deporte, distancia, fecha y tiempo meta.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h3>Elige tu evento</h3>
-        <p>Selecciona carrera, distancia y fecha. Maratón, triatlón, 10K — cualquier evento que tengas en mente.</p>
+        <h3>Conecta tus datos</h3>
+        <p>Vincula Garmin o Strava para que Claude analice tu historial real de actividades.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <h3>Genera tu plan</h3>
-        <p>La IA analiza tus datos y crea un plan semana a semana adaptado a tu nivel real, no al de un atleta genérico.</p>
+        <p>Claude crea un plan semana a semana con zonas de ritmo, notas semanales y sesiones de fuerza.</p>
       </div>
       <div class="step">
         <div class="step-num">4</div>
         <h3>Entrena y consulta</h3>
-        <p>Marca sesiones completadas, edítalas, y pregúntale al Coach IA lo que necesites sobre tu rendimiento.</p>
+        <p>Revisa tu cumplimiento cada semana en Seguimiento y usa el Coach para resolver cualquier duda.</p>
       </div>
     </div>
   </div>
@@ -595,11 +685,11 @@
       <div class="comp-card good">
         <h3><span>🚀</span> Entreno Virtual</h3>
         <ul class="comp-list">
-          <li>Analiza tus ritmos de Garmin</li>
+          <li>Analiza tus ritmos de Garmin o Strava</li>
           <li>Considera tu calidad de sueño</li>
           <li>Usa tu HRV y FC reposo</li>
-          <li>Plan único para ti</li>
-          <li>52 semanas de contexto</li>
+          <li>Plan único con zonas de ritmo para ti</li>
+          <li>52 semanas de contexto real</li>
         </ul>
       </div>
     </div>
@@ -615,30 +705,48 @@
     <div class="pricing-grid">
       <div class="price-card">
         <div class="price-name">Mensual</div>
-        <div class="price-amount">$9.99</div>
+        <div class="price-amount">$4.99</div>
         <div class="price-period">al mes · cancela cuando quieras</div>
         <ul class="price-features">
           <li>Planes ilimitados con IA</li>
           <li>Coach IA ilimitado</li>
-          <li>Historial Garmin 52 semanas</li>
+          <li>Zonas de ritmo personalizadas</li>
+          <li>Historial Garmin / Strava</li>
           <li>Análisis de recuperación</li>
-          <li>Predicción de carrera</li>
         </ul>
-        <a href="#" class="btn-price">Descargar en App Store</a>
+        <div class="store-buttons">
+          <a href="#" class="btn-store-small apple">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Descargar en App Store
+          </a>
+          <a href="#" class="btn-store-small google">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341c-.341 0-.618-.277-.618-.618V8.277c0-.341.277-.618.618-.618s.618.277.618.618v6.446c0 .341-.277.618-.618.618zm-11.046 0c-.341 0-.618-.277-.618-.618V8.277c0-.341.277-.618.618-.618s.618.277.618.618v6.446c0 .341-.277.618-.618.618zM8.5 18.5v1.5c0 .276.224.5.5.5s.5-.224.5-.5V18.5h5V20c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h.5c.828 0 1.5-.672 1.5-1.5V9H8v8c0 .828.672 1.5 1.5 1.5h-.5zm7.146-12.854l1-1.646c.069-.114.033-.263-.082-.332-.114-.069-.263-.033-.332.082l-1.021 1.682C14.557 5.175 13.8 5 13 5c-.8 0-1.557.175-2.211.432L9.768 3.75c-.069-.115-.218-.151-.332-.082-.115.069-.151.218-.082.332l1 1.646C9.291 6.357 8.5 7.646 8.5 9h7c0-1.354-.791-2.643-1.854-3.354z"/></svg>
+            Descargar en Google Play
+          </a>
+        </div>
       </div>
       <div class="price-card featured">
-        <div class="price-badge">⭐ Mejor valor · Ahorra 17%</div>
+        <div class="price-badge">⭐ Mejor valor · Ahorra 33%</div>
         <div class="price-name">Anual</div>
-        <div class="price-amount">$99.00</div>
-        <div class="price-period">al año · ~$8.25/mes</div>
+        <div class="price-amount">$39.99</div>
+        <div class="price-period">al año · ~$3.33/mes · 2 meses gratis</div>
         <ul class="price-features">
           <li>Todo lo del plan mensual</li>
-          <li>Notificaciones personalizadas</li>
-          <li>Resumen semanal del Coach</li>
+          <li>Plan de nutrición personalizado</li>
+          <li>Predicción de tiempo de carrera</li>
           <li>Acceso prioritario a novedades</li>
           <li>Cancela cuando quieras</li>
         </ul>
-        <a href="#" class="btn-price">Descargar en App Store</a>
+        <div class="store-buttons">
+          <a href="#" class="btn-store-small apple">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Descargar en App Store
+          </a>
+          <a href="#" class="btn-store-small google">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341c-.341 0-.618-.277-.618-.618V8.277c0-.341.277-.618.618-.618s.618.277.618.618v6.446c0 .341-.277.618-.618.618zm-11.046 0c-.341 0-.618-.277-.618-.618V8.277c0-.341.277-.618.618-.618s.618.277.618.618v6.446c0 .341-.277.618-.618.618zM8.5 18.5v1.5c0 .276.224.5.5.5s.5-.224.5-.5V18.5h5V20c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h.5c.828 0 1.5-.672 1.5-1.5V9H8v8c0 .828.672 1.5 1.5 1.5h-.5zm7.146-12.854l1-1.646c.069-.114.033-.263-.082-.332-.114-.069-.263-.033-.332.082l-1.021 1.682C14.557 5.175 13.8 5 13 5c-.8 0-1.557.175-2.211.432L9.768 3.75c-.069-.115-.218-.151-.332-.082-.115.069-.151.218-.082.332l1 1.646C9.291 6.357 8.5 7.646 8.5 9h7c0-1.354-.791-2.643-1.854-3.354z"/></svg>
+            Descargar en Google Play
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -652,23 +760,23 @@
     <div class="faq-list">
       <details>
         <summary>¿Qué es Entreno Virtual?</summary>
-        <p>Una app iOS que genera planes de entrenamiento personalizados con inteligencia artificial, analizando tus datos reales de Garmin. Cada plan se construye sobre tu historial real: ritmos, frecuencia cardíaca, volumen semanal y nivel de forma actual.</p>
+        <p>Una app para iOS y Android que genera planes de entrenamiento personalizados con inteligencia artificial, analizando tus datos reales de Garmin o Strava. Cada plan incluye zonas de ritmo específicas, notas semanales y sesiones de fuerza — construido sobre tu historial real, no sobre datos genéricos.</p>
       </details>
       <details>
-        <summary>¿Necesito un dispositivo Garmin?</summary>
-        <p>Sí. La app se conecta a tu cuenta de Garmin Connect para acceder a tu historial de actividades, FC, HRV y datos de sueño. Cualquier dispositivo Garmin con Garmin Connect funciona.</p>
+        <summary>¿Necesito un dispositivo Garmin o Strava?</summary>
+        <p>Necesitas al menos una de las dos. La app se conecta a Garmin Connect o Strava para acceder a tu historial de actividades, FC, HRV y datos de sueño. Cualquier dispositivo Garmin o cuenta Strava con actividades recientes funciona.</p>
       </details>
       <details>
         <summary>¿Por qué no usar ChatGPT?</summary>
-        <p>ChatGPT no tiene acceso a tus datos reales de entrenamiento. Genera planes genéricos sin saber cuánto corres, a qué ritmo, cómo duermes ni cuál es tu frecuencia cardíaca en reposo. Entreno Virtual analiza tu historial completo de Garmin y construye un plan específico para ti.</p>
+        <p>ChatGPT no tiene acceso a tus datos reales de entrenamiento. Genera planes genéricos sin saber cuánto corres, a qué ritmo, cómo duermes ni cuál es tu frecuencia cardíaca en reposo. Entreno Virtual analiza tu historial completo y construye un plan con ritmos objetivo calculados específicamente para ti.</p>
       </details>
       <details>
         <summary>¿Funciona para principiantes?</summary>
-        <p>Sí. La IA adapta el plan a tu nivel actual, tanto si acabas de empezar como si llevas años entrenando. El único requisito es tener un dispositivo Garmin con algunas semanas de historial.</p>
+        <p>Sí. La IA adapta el plan a tu nivel actual, tanto si acabas de empezar como si llevas años entrenando. El único requisito es tener algunas semanas de historial en Garmin o Strava.</p>
       </details>
       <details>
-        <summary>¿Qué tipo de preguntas puedo hacer al Coach IA?</summary>
-        <p>Puedes preguntarle sobre cualquier aspecto de tu rendimiento: cadencia promedio, horas de sueño, semana con más kilómetros, comparativas de volumen, tendencias de FC y mucho más. El Coach analiza tus datos reales de Garmin para responder.</p>
+        <summary>¿Qué incluye el plan generado?</summary>
+        <p>Cada plan incluye: tabla de zonas de ritmo calculadas a partir de tu tiempo objetivo, sesiones detalladas con distancia y ritmo exacto, nota semanal con el enfoque de cada semana, sesiones de fuerza con ejercicios y series, y plan de nutrición por tipo de día (entrenamiento, descanso, salida larga).</p>
       </details>
       <details>
         <summary>¿La app sustituye a un coach personal?</summary>
@@ -676,7 +784,7 @@
       </details>
       <details>
         <summary>¿Puedo cancelar en cualquier momento?</summary>
-        <p>Sí, sin penalizaciones. Cancela desde Ajustes de iPhone → Tu nombre → Suscripciones. La suscripción permanece activa hasta el final del período pagado.</p>
+        <p>Sí, sin penalizaciones. En iOS cancela desde Ajustes → Tu nombre → Suscripciones. En Android desde Google Play → Suscripciones. La suscripción permanece activa hasta el final del período pagado.</p>
       </details>
     </div>
   </div>
@@ -690,7 +798,7 @@
     <a href="mailto:jorge@coenesa.com">Soporte</a>
     <a href="#faq">FAQ</a>
   </div>
-  <div class="footer-copy">© 2025 Entreno Virtual. Todos los derechos reservados.</div>
+  <div class="footer-copy">© 2026 Entreno Virtual. Todos los derechos reservados.</div>
 </footer>
 
 </body>
