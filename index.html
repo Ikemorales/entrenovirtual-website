@@ -138,8 +138,9 @@
     }
     .btn-primary:hover { background: #333; transform: translateY(-1px); }
     .btn-primary svg { width: 20px; height: 20px; }
-    .btn-android { background: #1DB954 !important; }
-    .btn-android:hover { background: #17a349 !important; }
+    /* promo banner */
+    .promo-banner { background: linear-gradient(135deg, #1A6FE8, #4F8EF7); color: #fff; text-align: center; padding: 14px 24px; font-size: .9rem; font-weight: 600; }
+    .promo-banner a { color: #fff; text-decoration: underline; margin-left: 8px; }
     .hero-note { font-size: .8rem; color: var(--text2); }
 
     /* Phone mockup */
@@ -282,6 +283,12 @@
 </head>
 <body>
 
+<!-- PROMO BANNER -->
+<div class="promo-banner" data-i18n="promoBanner">
+  🎽 Código MUNI2026 — 3 meses gratis para el evento MUNI Guatemala.
+  <a href="https://apps.apple.com/redeem?ctx=offercodes&id=6772571633&code=MUNI2026" target="_blank" data-i18n="promoCta">Canjear ahora →</a>
+</div>
+
 <!-- NAV -->
 <nav>
   <a href="/" class="nav-logo">
@@ -304,7 +311,7 @@
 <!-- HERO -->
 <div class="hero container">
   <div>
-    <div class="hero-badge" data-i18n="heroBadge">⚡ Garmin · Strava · Claude AI</div>
+    <div class="hero-badge" data-i18n="heroBadge">⚡ Apple Health · Garmin · Strava · Claude AI</div>
     <h1 data-i18n="heroH1">Tu historial real. Tu evento. <span>Tu plan.</span></h1>
     <p data-i18n="heroP">Conecta tu app de entrenamiento, elige tu evento objetivo y Claude crea un plan semana a semana basado en tu historial deportivo real. Seguimiento cuantitativo y análisis técnico incluidos.</p>
     <div class="hero-actions">
@@ -312,7 +319,7 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         <span data-i18n="heroAppStore">Descargar en App Store</span>
       </a>
-      <span class="hero-note" data-i18n="heroNote">Gratis · Premium desde $4.99/mes · Compatible con Garmin y Strava</span>
+      <span class="hero-note" data-i18n="heroNote">Gratis · Premium desde $4.99/mes · Compatible con Garmin, Apple Health y Strava</span>
     </div>
   </div>
 
@@ -358,13 +365,18 @@
 
 <!-- LOGOS -->
 <div class="logos">
-  <p data-i18n="logosLabel">Conecta tu app de entrenamiento</p>
+  <p data-i18n="logosLabel">Conecta tus apps de entrenamiento</p>
   <div class="logos-row">
     <div class="logo-badge">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="#007CC3"><circle cx="12" cy="12" r="12"/></svg>
-      Garmin Connect
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF2D55"><path d="M12 21.7C6.6 21.7 2.3 17.4 2.3 12S6.6 2.3 12 2.3 21.7 6.6 21.7 12 17.4 21.7 12 21.7zm0-17C7.4 4.7 3.7 8.4 3.7 13s3.7 8.3 8.3 8.3 8.3-3.7 8.3-8.3S16.6 4.7 12 4.7z"/><path d="M15.5 8.5l-7 3.5 3.5 7 7-3.5z" fill="#FF2D55"/></svg>
+      Apple Health
     </div>
-    <div class="logo-badge" style="font-size:.8rem;color:#aaa;font-weight:400;" data-i18n="logosOr">ó</div>
+    <div class="logo-badge" style="font-size:.8rem;color:#aaa;font-weight:400;">·</div>
+    <div class="logo-badge">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#007CC3"><circle cx="12" cy="12" r="12"/></svg>
+      Garmin
+    </div>
+    <div class="logo-badge" style="font-size:.8rem;color:#aaa;font-weight:400;" data-i18n="logosOr">·</div>
     <div class="logo-badge">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="#FC4C02"><rect width="24" height="24" rx="4"/><path d="M12 6.5c-1.5 0-3 .5-4 1.5L5 10l2 2 2-2c.5-.5 1.5-1 2-1s1.5.5 2 1l2 2 2-2-3-2c-1-1-2-1.5-2-1.5z" fill="white" opacity=".9"/></svg>
       Strava
@@ -395,11 +407,12 @@
         </div>
         <div class="phase-body">
           <ul>
-            <li data-i18n="phase1Li1">Conecta Garmin o Strava — la app lee tu perfil atlético real</li>
+            <li data-i18n="phase1Li1">Conecta Apple Health, Garmin o Strava — la app lee tu perfil atlético real</li>
             <li data-i18n="phase1Li2">Registra tu evento: deporte, distancia, fecha y tiempo meta</li>
             <li data-i18n="phase1Li3">Claude analiza tu historial y genera el plan semana a semana</li>
             <li data-i18n="phase1Li4">Zonas de ritmo calculadas para ti, no genéricas</li>
-            <li data-i18n="phase1Li5">Plan de nutrición por tipo de día incluido</li>
+            <li data-i18n="phase1Li5">Importa tu plan existente con fecha de inicio personalizada</li>
+            <li data-i18n="phase1Li6">Plan de nutrición por tipo de día incluido</li>
           </ul>
         </div>
       </div>
@@ -418,6 +431,7 @@
             <li data-i18n="phase2Li2">Porcentaje de cumplimiento acumulado semana a semana</li>
             <li data-i18n="phase2Li3"><strong>Análisis técnico:</strong> velocidad, cadencia, FC y potencia</li>
             <li data-i18n="phase2Li4">Gráficas de evolución y tendencias de progreso atlético</li>
+            <li data-i18n="phase2Li5">Mueve sesiones a otro día o agrégalas al Calendario de iPhone</li>
           </ul>
         </div>
       </div>
@@ -459,7 +473,7 @@
       <div class="step">
         <div class="step-num">2</div>
         <h3 data-i18n="step2H">Conecta tus datos</h3>
-        <p data-i18n="step2P">Vincula Garmin o Strava para que Claude analice tu historial real de actividades.</p>
+        <p data-i18n="step2P">Vincula Apple Health (compatible con Garmin) o Strava para que Claude analice tu historial real de actividades.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
@@ -650,6 +664,7 @@
     <a href="privacy.html" data-i18n="footerPrivacy">Política de privacidad</a>
     <a href="mailto:jorge@coenesa.com" data-i18n="footerSupport">Soporte</a>
     <a href="#faq">FAQ</a>
+    <a href="https://www.instagram.com/entrenovirtual.app" target="_blank">Instagram</a>
   </div>
   <div class="footer-copy" data-i18n="footerCopy">© 2026 Entreno Virtual. Todos los derechos reservados.</div>
 </footer>
@@ -663,10 +678,12 @@ const T = {
     heroAppStore: 'Descargar en App Store',
     pricingDownload: 'Descargar gratis en App Store',
     pricingFreeNote: 'Gratis · Sin tarjeta de crédito · Suscripción Premium disponible desde la app',
-    heroBadge: '⚡ Garmin · Strava · Claude AI',
+    promoBanner: '🎽 Código MUNI2026 — 3 meses gratis para el evento MUNI Guatemala.',
+    promoCta: 'Canjear ahora →',
+    heroBadge: '⚡ Apple Health · Garmin · Strava · Claude AI',
     heroH1: 'Tu historial real. Tu evento. <span>Tu plan.</span>',
     heroP: 'Conecta tu app de entrenamiento, elige tu evento objetivo y Claude crea un plan semana a semana basado en tu historial deportivo real. Seguimiento cuantitativo y análisis técnico incluidos.',
-    heroNote: 'Gratis · Premium desde $4.99/mes · Compatible con Garmin y Strava',
+    heroNote: 'Gratis · Premium desde $4.99/mes · Compatible con Garmin, Apple Health y Strava',
     phoneGreeting: 'Hola, Jorge 👋',
     phoneToday: 'SESIÓN DE HOY',
     phoneSession: 'Rodaje suave Z2',
@@ -680,17 +697,19 @@ const T = {
     featSub: 'Conecta tu app de entrenamiento y Entreno Virtual convierte tus datos reales en un plan personalizado — con seguimiento cuantitativo, análisis técnico y a Claude disponible en todo momento.',
     phase1Title: 'Planificación',
     phase1Sub: 'Tu historial + tu evento = tu plan',
-    phase1Li1: 'Conecta Garmin o Strava — la app lee tu perfil atlético real',
+    phase1Li1: 'Conecta Apple Health, Garmin o Strava — la app lee tu perfil atlético real',
     phase1Li2: 'Registra tu evento: deporte, distancia, fecha y tiempo meta',
     phase1Li3: 'Claude analiza tu historial y genera el plan semana a semana',
     phase1Li4: 'Zonas de ritmo calculadas para ti, no genéricas',
-    phase1Li5: 'Plan de nutrición por tipo de día incluido',
+    phase1Li5: 'Importa tu plan existente con fecha de inicio personalizada',
+    phase1Li6: 'Plan de nutrición por tipo de día incluido',
     phase2Title: 'Seguimiento',
     phase2Sub: 'Cuantitativo + análisis técnico',
     phase2Li1: '<strong>Cuantitativo:</strong> sesiones, km y tiempo planeado vs real',
     phase2Li2: 'Porcentaje de cumplimiento acumulado semana a semana',
     phase2Li3: '<strong>Análisis técnico:</strong> velocidad, cadencia, FC y potencia',
     phase2Li4: 'Gráficas de evolución y tendencias de progreso atlético',
+    phase2Li5: 'Mueve sesiones a otro día o agrégalas al Calendario de iPhone',
     phase3Title: 'Coach IA',
     phase3Sub: 'Claude disponible en todo momento',
     phase3Li1: 'Pregúntale cualquier cosa sobre tu plan o tu progreso',
@@ -703,7 +722,7 @@ const T = {
     step1H: 'Agrega tu evento',
     step1P: 'Ve a Mi Plan y registra tu evento objetivo: deporte, distancia, fecha y tiempo meta.',
     step2H: 'Conecta tus datos',
-    step2P: 'Vincula Garmin o Strava para que Claude analice tu historial real de actividades.',
+    step2P: 'Vincula Apple Health (compatible con Garmin) o Strava para que Claude analice tu historial real de actividades.',
     step3H: 'Genera tu plan',
     step3P: 'Claude crea un plan semana a semana con zonas de ritmo, notas semanales y sesiones de fuerza.',
     step4H: 'Entrena y consulta',
@@ -765,7 +784,7 @@ const T = {
     faq1Q: '¿Qué es Entreno Virtual?',
     faq1A: 'Una app para iOS y Android que conecta tu app de entrenamiento (Garmin o Strava), lee tu perfil atlético real y genera un plan personalizado para tu próximo evento con Claude AI. Incluye seguimiento cuantitativo (sesiones, km y tiempo planeado vs real), análisis técnico (FC, cadencia, velocidad) y a Claude disponible para consultas en cualquier momento.',
     faq2Q: '¿Qué app de entrenamiento necesito?',
-    faq2A: 'Garmin Connect o Strava — cualquiera de las dos funciona. La app lee tu historial de actividades, ritmos, frecuencia cardíaca, HRV y datos de sueño para construir un plan que refleje tu nivel real. Si tienes ambas, puedes conectar la que prefieras.',
+    faq2A: 'Apple Health, Garmin Connect o Strava. Si usas Garmin, activa la sincronización con Apple Health desde Garmin Connect → Más → Ajustes → Conexiones de salud → Apple Health, y todos tus datos llegarán automáticamente. También puedes conectar Strava directamente desde la app.',
     faq3Q: '¿Qué diferencia hay con usar solo IA?',
     faq3A: 'Una IA sin acceso a tus datos genera planes genéricos — no sabe cuánto corres, a qué ritmo, cómo duermes ni cuál es tu FC en reposo. Entreno Virtual conecta tu app de entrenamiento, analiza tu historial real y construye un plan con ritmos calculados específicamente para ti y tu evento.',
     faq4Q: '¿Funciona para principiantes?',
@@ -775,7 +794,7 @@ const T = {
     faq6Q: '¿La app sustituye a un coach personal?',
     faq6A: 'No completamente. Un coach certificado aporta experiencia humana y motivación presencial. Lo que sí ofrece Entreno Virtual es orientación personalizada 24/7 basada en datos reales — el punto intermedio entre entrenar sin guía y tener un coach dedicado.',
     faq7Q: '¿Puedo cancelar en cualquier momento?',
-    faq7A: 'Sí, sin penalizaciones. Cancela desde Ajustes → Tu nombre → Suscripciones. La suscripción permanece activa hasta el final del período pagado.',
+    faq7A: 'Sí, sin penalizaciones. Cancela desde Ajustes → Tu nombre → Suscripciones. La suscripción permanece activa hasta el final del período pagado. También puedes canjear el código MUNI2026 para 3 meses gratis.',
     footerPrivacy: 'Política de privacidad',
     footerSupport: 'Soporte',
     footerCopy: '© 2026 Entreno Virtual. Todos los derechos reservados.',
@@ -788,10 +807,12 @@ const T = {
     heroAppStore: 'Download on App Store',
     pricingDownload: 'Download free on App Store',
     pricingFreeNote: 'Free · No credit card required · Premium subscription available in-app',
-    heroBadge: '⚡ Garmin · Strava · Claude AI',
+    promoBanner: '🎽 Code MUNI2026 — 3 months free for the MUNI Guatemala event.',
+    promoCta: 'Redeem now →',
+    heroBadge: '⚡ Apple Health · Garmin · Strava · Claude AI',
     heroH1: 'Your real history. Your race. <span>Your plan.</span>',
     heroP: 'Connect your training app, pick your goal event, and Claude builds a week-by-week plan based on your real athletic history. Quantitative tracking and technical analysis included.',
-    heroNote: 'Free · Premium from $4.99/mo · Works with Garmin & Strava',
+    heroNote: 'Free · Premium from $4.99/mo · Works with Garmin, Apple Health & Strava',
     phoneGreeting: 'Hi, Jorge 👋',
     phoneToday: "TODAY'S SESSION",
     phoneSession: 'Easy run Z2',
@@ -805,17 +826,19 @@ const T = {
     featSub: 'Connect your training app and Entreno Virtual turns your real data into a personalized plan — with quantitative tracking, technical analysis, and Claude available at all times.',
     phase1Title: 'Planning',
     phase1Sub: 'Your history + your race = your plan',
-    phase1Li1: 'Connect Garmin or Strava — the app reads your real athletic profile',
+    phase1Li1: 'Connect Apple Health, Garmin or Strava — the app reads your real athletic profile',
     phase1Li2: 'Add your event: sport, distance, date, and goal time',
     phase1Li3: 'Claude analyzes your history and builds the plan week by week',
     phase1Li4: 'Pace zones calculated for you — not generic',
-    phase1Li5: 'Nutrition plan by day type included',
+    phase1Li5: 'Import your existing plan with a custom start date',
+    phase1Li6: 'Nutrition plan by day type included',
     phase2Title: 'Tracking',
     phase2Sub: 'Quantitative + technical analysis',
     phase2Li1: '<strong>Quantitative:</strong> sessions, km, and planned vs actual time',
     phase2Li2: 'Cumulative compliance percentage week by week',
     phase2Li3: '<strong>Technical analysis:</strong> speed, cadence, HR, and power',
     phase2Li4: 'Progress charts and athletic development trends',
+    phase2Li5: 'Move sessions to another day or add them to your iPhone Calendar',
     phase3Title: 'AI Coach',
     phase3Sub: 'Claude available at all times',
     phase3Li1: 'Ask anything about your plan or your progress',
@@ -828,7 +851,7 @@ const T = {
     step1H: 'Add your event',
     step1P: 'Go to My Plan and enter your goal event: sport, distance, date, and target time.',
     step2H: 'Connect your data',
-    step2P: 'Link Garmin or Strava so Claude can analyze your real activity history.',
+    step2P: 'Link Apple Health (compatible with Garmin) or Strava so Claude can analyze your real activity history.',
     step3H: 'Generate your plan',
     step3P: 'Claude builds a week-by-week plan with pace zones, weekly notes, and strength sessions.',
     step4H: 'Train and ask',
@@ -890,7 +913,7 @@ const T = {
     faq1Q: 'What is Entreno Virtual?',
     faq1A: 'An iPhone app that connects your training app (Garmin or Strava), reads your real athletic profile, and generates a personalized plan for your next event with Claude AI. Includes quantitative tracking (sessions, km, and planned vs actual time), technical analysis (HR, cadence, speed), and Claude available for questions at any time.',
     faq2Q: 'Which training app do I need?',
-    faq2A: 'Garmin Connect or Strava — either one works. The app reads your activity history, paces, heart rate, HRV, and sleep data to build a plan that reflects your real fitness level. If you have both, connect whichever you prefer.',
+    faq2A: 'Apple Health, Garmin Connect, or Strava. If you use Garmin, enable sync with Apple Health from Garmin Connect → More → Settings → Health connections → Apple Health, and all your data will flow automatically. You can also connect Strava directly from the app.',
     faq3Q: "What's the difference from using AI alone?",
     faq3A: "AI without access to your data generates generic plans — it doesn't know how much you run, at what pace, how you sleep, or what your resting HR is. Entreno Virtual connects your training app, analyzes your real history, and builds a plan with paces calculated specifically for you and your event.",
     faq4Q: 'Does it work for beginners?',
